@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PB Game</title>
+	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="icon" href="ei_1661962434184-removebg-preview.png">
+
+</head>
+<body>
+<center>
+	<h1>Phoenix boys</h1>
+<br>
+<div class="container3">
+<h2>Guess the number</h2>
+<br>
+<input id="thambi">
+<br>
+<button onclick="amma()">press</button>
+<p id="anna">you are wrong/correct</p>
+<p id="score"></p>
+</div>
+
+<script>
+	var thambi=document.getElementById('thambi')
+	var anna=document.getElementById('anna')
+	var score=document.getElementById('score')
+	var thangai=Math.floor(Math.random()*10)+1
+	var totalscore=8
+	function amma()
+	{
+		var enter=thambi.value
+		if (thangai==enter) {
+			console.log("correct")
+			anna.textContent="correct"
+			alert("you are lucky 😍🎉")
+		}
+		else{
+			totalscore=totalscore-1
+			score.textContent="score"+totalscore
+			anna.textContent="wrong"
+
+		}
+	}
+</script>
+</center>
+</body>
+</html>
